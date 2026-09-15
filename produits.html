@@ -98,7 +98,35 @@
     text-align: center;
     padding: 24px 5%;
     font-size: 0.85rem;
-  }
+  }.product {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.product-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.product p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  min-height: 55px;
+  margin-bottom: 15px;
+}
+
+.order-btn {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.order-btn:hover {
+  transform: scale(1.03);
+}
 </style>
 </head>
 <body>
