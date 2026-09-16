@@ -98,36 +98,11 @@
     text-align: center;
     padding: 24px 5%;
     font-size: 0.85rem;
-  }.product {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-.product-icon {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.product p {
-  color: #666;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  min-height: 55px;
-  margin-bottom: 15px;
-}
-
-.order-btn {
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.order-btn:hover {
-  transform: scale(1.03);
-}
+  }
 </style>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d1b3e">
+<link rel="icon" href="icon-192.png">
 </head>
 <body>
 
@@ -144,69 +119,42 @@
   <h2>Nos Produits</h2>
   <p>Matériel réseau, sécurité et télécommunication de qualité, disponible à la commande.</p>
 </section>
- <section class="products">
-<div class="cart-bar">
-  🛒 Panier : <span id="cart-count">0</span> produit(s)
-  <button onclick="showCart()">Voir le panier</button>
-</div>
+
+<section class="products">
+
   <div class="product">
-    <div class="product-icon">📷</div>
     <h3>Caméra IP</h3>
-    <p>Caméra de surveillance IP adaptée à la sécurité des locaux.</p>
     <div class="price">75 000 FCFA</div>
-    <a class="order-btn"
-       href="https://wa.me/22945002299?text=Bonjour,%20je%20souhaite%20commander%20une%20Cam%C3%A9ra%20IP%20(75%20000%20FCFA)"
-       target="_blank">
-       Commander sur WhatsApp
-    </a>
+    <a class="order-btn" href="https://wa.me/22945002299?text=Bonjour,%20je%20souhaite%20commander%20une%20Cam%C3%A9ra%20IP%20(75%20000%20FCFA)" target="_blank">Commander</a>
   </div>
 
   <div class="product">
-    <div class="product-icon">☀️</div>
     <h3>Caméra Solaire</h3>
-    <p>Solution de vidéosurveillance avec alimentation solaire.</p>
     <div class="price">65 000 FCFA</div>
-    <a class="order-btn"
-       href="https://wa.me/22945002299?text=Bonjour,%20je%20souhaite%20commander%20une%20Cam%C3%A9ra%20Solaire%20(65%20000%20FCFA)"
-       target="_blank">
-       Commander sur WhatsApp
-    </a>
+    <a class="order-btn" href="https://wa.me/22945002299?text=Bonjour,%20je%20souhaite%20commander%20une%20Cam%C3%A9ra%20Solaire%20(65%20000%20FCFA)" target="_blank">Commander</a>
   </div>
 
   <div class="product">
-    <div class="product-icon">🔌</div>
     <h3>Switch réseau</h3>
-    <p>Équipement destiné à connecter plusieurs appareils sur un réseau.</p>
     <div class="price">60 000 FCFA</div>
-    <a class="order-btn"
-       href="https://wa.me/22945002299?text=Bonjour,%20je%20souhaite%20commander%20un%20Switch%20(60%20000%20FCFA)"
-       target="_blank">
-       Commander sur WhatsApp
-    </a>
+    <a class="order-btn" href="https://wa.me/22945002299?text=Bonjour,%20je%20souhaite%20commander%20un%20Switch%20(60%20000%20FCFA)" target="_blank">Commander</a>
   </div>
 
   <div class="product">
-    <div class="product-icon">🌐</div>
-    <h3>Câble Réseau</h3>
-    <p>Câble réseau pour les installations et connexions informatiques.</p>
+    <h3>Câble Réseau (l'unité)</h3>
     <div class="price">10 000 FCFA</div>
-    <a class="order-btn"
-       href="https://wa.me/22945002299?text=Bonjour,%20je%20souhaite%20commander%20un%20C%C3%A2ble%20R%C3%A9seau%20(10%20000%20FCFA)"
-       target="_blank">
-       Commander sur WhatsApp
-    </a>
+    <a class="order-btn" href="https://wa.me/22945002299?text=Bonjour,%20je%20souhaite%20commander%20un%20C%C3%A2ble%20R%C3%A9seau%20(10%20000%20FCFA)" target="_blank">Commander</a>
   </div>
 
 </section>
-
 
 <div class="info-box" id="contact">
   <h3>Comment commander</h3>
   <ul>
     <li><strong>1. Contact :</strong> WhatsApp ou appel au 45 00 22 99</li>
     <li><strong>2. Paiement :</strong> Mobile Money (MTN ou Moov) au 45 00 22 99</li>
-    <li><strong>3. Livraison :</strong> disponible à Bohicon, 5 500 FCFA (payante)</li>
-    <li><strong>4. Retrait :</strong> possible aussi sans frais si vous passez récupérer vous-même</li>
+    <li><strong>3. Livraison :</strong> disponible à Bohicon, 5 500 FCFA, uniquement pendant les vacances scolaires</li>
+    <li><strong>4. Retrait :</strong> en dehors des vacances, retrait uniquement (sans frais), en venant récupérer vous-même</li>
   </ul>
 </div>
 
@@ -215,5 +163,13 @@
   <p>Contact : 45 00 22 99</p>
 </footer>
 
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("service-worker.js");
+  });
+}
+</script>
 </body>
 </html>

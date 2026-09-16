@@ -97,6 +97,9 @@
     margin-top: 40px;
   }
 </style>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d1b3e">
+<link rel="icon" href="icon-192.png">
 </head>
 <body>
 
@@ -104,8 +107,7 @@
   <h1>Web Martin Réseau</h1>
   <nav>
     <a href="#accueil">Accueil</a>
-   <a href="produits.html">Produits</a>
-    <a href="#services">Services</a>
+    <a href="produits.html">Produits</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -139,11 +141,13 @@
   <p>Contact : votre-email@exemple.com</p>
 </footer>
 
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("service-worker.js");
+  });
+}
+</script>
 </body>
 </html>
-<nav>
- <a href="produits.html">Produits</a>
-  <a href="#accueil">Accueil</a>
-   <a href="produits.html">Produits</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
